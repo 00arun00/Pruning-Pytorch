@@ -162,18 +162,18 @@ if __name__ == '__main__':
     train_loader, test_loader =  get_mnist_dataloaders(root, batch_size)
 
     # check the performance before pruning
-    print("Training Accuracy:",get_accuracy_top1(model,train_loader))
-    print("Testing Accuracy:",get_accuracy_top1(model,test_loader))
+    print "Training Accuracy:",get_accuracy_top1(model,train_loader)
+    print "Testing Accuracy:",get_accuracy_top1(model,test_loader)
 
     # Naive pruning
     prune_model(model,threshold)
-    print("Naive Pruning Done.....")
+    print "Naive Pruning Done....."
     # check the performance after naive pruning
-    print("Training Accuracy after naive pruning:",get_accuracy_top1(model,train_loader))
-    print("Testing Accuracy after naive pruning:",get_accuracy_top1(model,test_loader))
+    print "Training Accuracy after naive pruning:",get_accuracy_top1(model,train_loader)
+    print "Testing Accuracy after naive pruning:",get_accuracy_top1(model,test_loader)
 
     # Finetuning the pruned model
     prune_model_finetune(model,train_loader,test_loader,threshold)
     # check the performance after finetuning
-    print("Training Accuracy after finetuning:",get_accuracy_top1(model,train_loader))
-    print("Testing Accuracy after finetuning:",get_accuracy_top1(model,test_loader))
+    print "Training Accuracy after finetuning:",get_accuracy_top1(model,train_loader)
+    print "Testing Accuracy after finetuning:",get_accuracy_top1(model,test_loader)
