@@ -1,2 +1,2 @@
-# AdaptivePruning
-Adaptive pruning of neural nets 
+# Neural Network Pruning
+Explorative study on how to prune neural networks and the effect of various hyper parameters on pruning. 
